@@ -1,0 +1,8 @@
+button, input, select, textarea{
+    font-family: inherit;
+    font-size: 100%;
+    
+    box-sizing: border-box;
+    width:150px;
+    resize: none;
+}

@@ -1,0 +1,10 @@
+:root{
+    /* Box Shadow */
+    --bs-black-thin : 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    --bs-white-inset : 0px 0px 2px 3px rgba(255, 255, 255, .3);
+    
+    /* Color */
+    --primary:hsl(180, 90%, 70%);
+    background: linear-gradient(to right, bisque, aqua, lightcoral);
+}
+
