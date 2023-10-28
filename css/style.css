@@ -5,6 +5,35 @@
     
     /* Color */
     --primary:hsl(180, 90%, 70%);
+    height: 1000vh;
+}
+
+/* Font Start */
+@font-face {
+    font-family: minions;
+    src: url(./../fonts/satans_minions/SATAM___.TTF);
+}
+
+@font-face {
+    font-family: vinque;
+    src: url(./../fonts/vinque/vinque\ rg.otf);
+}
+
+@font-face {
+    font-family: fonarto;
+    src: url(./../fonts/fonarto/Fonarto\ XT.ttf);
+}
+
+/* Font End */
+
+* ::selection{
+    background-color: black;
+    color:aqua;
+}
+
+* ::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 body{
@@ -13,7 +42,7 @@ body{
     height: 100vh;
     box-sizing: border-box;
     background: rgb(230, 230, 230);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: vinque, minions, arial;
 }
 
 main{
@@ -29,6 +58,6 @@ main{
     display: flex;/
 }
 
-section, form{
+main > section, form{
     flex:1;
 }

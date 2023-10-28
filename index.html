@@ -17,47 +17,66 @@
     <main>
         <section id="left-section-container">
             <header id="left-section-header">
-                <h1>Dragon Slayer Community</h1>
-                <p>You think you good eh...? try to join here and look if you good Enough</p>
+                <div>
+                    <img id="dg-logo" src="./assets/dragonjpg-removebg-preview.png" alt="Dragon Logo">
+                </div>      
+                <h1>D S</h1>
+                
             </header>
             <div id="img-container">
-                <img id="left-image" src="./assets/Danger of Dragons Anime Displate Metal Poster.jpg" alt="left-section-background">
+                <img id="left-image" src="./assets/bg/dragon2.jpg" alt="left-section-background">
+                <p>
+                    Photo by <a href="https://unsplash.com/photos/shallow-focus-photo-of-dragon-on-gray-building-F6920BvzrZE">Sean Thomas</a>
+                    on <a href="https://unsplash.com">unsplash</a> 
+                </p>
+                
             </div>
         </section>
-        <form action="#" method="get">
+        <form action="#" method="get" autocomplete="off">
             <header>
                 <h6>
-                    This is not a Real service but yeah its just some random text that i want to give here
+                    &nbsp;&nbsp;&nbsp;This is not a Real service but yeah,  its just some random text that i want to give here
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad obcaecati laboriosam reprehenderit, consequuntur tempore nihil fuga nobis animi earum. A obcaecati pariatur molestiae quia nobis quisquam, ratione culpa cupiditate omnis.
                 </h6>
             </header>
 
             <fieldset>
-                <p>
-                    <label for="user-name">UserName :</label>
-                    <input type="text" id="user-name" name="user-name" placeholder="UserName">    
-                </p>
+                <div style="display:flex; gap:50px; "> 
+                    <p style="flex:1" >
+                        <label for="user-name">UserName :</label>
+                        <input type="text" id="user-name" name="user-name" placeholder="UserName" required>    
+                    </p>
+                    
+                    <p style="flex:1">
+                        <label for="number">Number :</label>
+                        <input type="text" id="number" name="number" maxlength="14" placeholder="+62xxxx without(-)" required>    
+                    </p>
+                </div>
                 
-                <p>
-                    <label for="number">Number :</label>
-                    <input type="text" id="number" name="number" maxlength="14" placeholder="+62xxxx without(-)">    
-                </p>
                 
                 <p>
                     <label for="email">E-Mail :</label>
                     <input type="email" name="email" id="email" placeholder="Email@email.com">
                 </p>
                 
-                <p>
-                    <label for="password">Password :</label>
-                    <input type="password" name="password" id="password" placeholder="Password">
-                </p>
+                <div style="display:flex; gap:50px; ">
+                    <p style="flex:1">
+                        <label for="password">Password :</label>
+                        <input type="password" minlength="8" name="password" id="password" placeholder="Password">
+                    </p>
+                    
+                    <p style="flex:1">
+                        <label for="re-password">Confirm Password :</label>
+                        <input type="password" minlength="8" name="re-password" id="re-password" placeholder="Confirm Password">
+                    </p>
+                </div>   
                 
-                <p>
-                    <label for="re-password">Confirm Password :</label>
-                    <input type="password" name="re-password" id="re-password" placeholder="Confirm Password">
-                </p>
-                
+                <section id="button-container">
+                    <button id="sign-up" type="submit"> Create Account</button>
+                    <p style="display: inline;" id="login">
+                        Already have an account ? <a href="#">Log in</a> 
+                    </p>
+                </section>
             </fieldset>
         </form>
     </main>
