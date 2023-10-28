@@ -5,7 +5,8 @@
     
     /* Color */
     --primary:hsl(180, 90%, 70%);
-    height: 1000vh;
+    /* height: 1000vh; */
+    background-color: #44413D;
 }
 
 /* Font Start */

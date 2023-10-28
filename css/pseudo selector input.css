@@ -1,0 +1,23 @@
+label{
+    position: relative;
+}
+span{
+    position: absolute;
+    right:0;
+}
+
+#pass-req > p::before{
+    content:" ❌ ";
+    display: inline;
+}
+/* ❌ ✅ */
+
+input:invalid{
+    border:red solid 2px;
+}
+
+input:valid{
+    border:green 2px solid;
+    background-color: rgb(216, 255, 255);;
+}
+

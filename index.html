@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/left-section.css">
     <link rel="stylesheet" href="./css/right-section.css">
+    <link rel="stylesheet" href="./css/pseudo selector input.css">
 </head>
 <body>
     <main>
         <section id="left-section-container">
             <header id="left-section-header">
                 <div>
-                    <img id="dg-logo" src="./assets/dragonjpg-removebg-preview.png" alt="Dragon Logo">
+                    <img id="dg-logo" src="./assets/bg/naga 2.png" alt="Dragon Logo">
                 </div>      
                 <h1>D S</h1>
                 
@@ -41,39 +42,45 @@
             </header>
 
             <fieldset>
+                <legend>Field with ( * ) is required</legend>
                 <div style="display:flex; gap:50px; "> 
                     <p style="flex:1" >
-                        <label for="user-name">UserName :</label>
-                        <input type="text" id="user-name" name="user-name" placeholder="UserName" required>    
+                        <label for="user-name">UserName : <span >*</span></label>
+                        <input type="text" pattern=".*[A-Z].*" title="At least one UpperCase" id="user-name" name="user-name" placeholder="UserName" required>    
                     </p>
                     
                     <p style="flex:1">
-                        <label for="number">Number :</label>
-                        <input type="text" id="number" name="number" maxlength="14" placeholder="+62xxxx without(-)" required>    
+                        <label for="number">Number : </label>
+                        <input type="text" id="number" name="number" maxlength="14" placeholder="+62xxxx without(-)" >    
                     </p>
                 </div>
                 
                 
                 <p>
-                    <label for="email">E-Mail :</label>
-                    <input type="email" name="email" id="email" placeholder="Email@email.com">
+                    <label for="email">E-Mail : <span >*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Email@email.com" required>
                 </p>
                 
-                <div style="display:flex; gap:50px; ">
-                    <p style="flex:1">
-                        <label for="password">Password :</label>
-                        <input type="password" minlength="8" name="password" id="password" placeholder="Password">
+                <div style="display:flex; gap:50px; position: relative; ">
+                    <div id="pass-req">
+                            <p> At least contain one Upper case</p>
+                            <p> At least contain one number (0 - 9)</p> 
+                    </div>
+                    <p id="pw" style="flex:1;" >
+                        <label for="password">Password : <span >*</span></label>
+                        
+                        <input type="password" minlength="8" pattern="^(?=.*[A-Z])(?=.*\d).*$" title="At least 1 Upper case & At least one number" name="password" id="password" placeholder="Password" required>
                     </p>
                     
                     <p style="flex:1">
-                        <label for="re-password">Confirm Password :</label>
-                        <input type="password" minlength="8" name="re-password" id="re-password" placeholder="Confirm Password">
+                        <label for="re-password">Confirm Password : <span >*</span></label>
+                        <input type="password" minlength="8" name="re-password" id="re-password" placeholder="Confirm Password" required>
                     </p>
                 </div>   
                 
                 <section id="button-container">
                     <button id="sign-up" type="submit"> Create Account</button>
-                    <p style="display: inline;" id="login">
+                    <p style="display: inline; color:#C3C3C1;" id="login">
                         Already have an account ? <a href="#">Log in</a> 
                     </p>
                 </section>
