@@ -1,0 +1,40 @@
+#form-container{
+    box-sizing: border-box;
+    width:700px;
+    height: 100%;
+    /* background-color: aqua; */
+    margin-left:auto;
+    padding:60px 50px 0 0 ;
+
+    /* position: relative; */
+}
+
+#header-container{
+    box-sizing: border-box;
+    color:white;
+    width:580px;
+
+    display: flex;;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    position: absolute;
+    left:100px;
+    top:150px;
+    
+    
+}
+
+#header-container > h1{
+    font-size: 2.5rem;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+#header-container > h1 + p{
+    text-indent: 1em;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}

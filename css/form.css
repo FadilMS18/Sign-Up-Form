@@ -1,0 +1,108 @@
+label{
+    position: relative;
+    display: block;
+    margin:20px 0 5px 0;
+    box-sizing: border-box;
+}
+
+span{
+    font-size: 0.6rem;
+    box-sizing: border-box;
+    position: absolute;
+    right:0;
+    background-color: black;
+    padding:5px;
+    color:white
+}
+
+#form *{
+    box-sizing: border-box;
+}
+#form{
+    margin:80px 0 0 -50px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255, 0.85);
+    width:500px;
+    height: 500px;
+    /* display:flex;
+    flex-direction: column;
+    align-items: center; */
+
+    border:none;
+    border-radius:10px;
+    padding:30px 50px;
+    position: relative;
+
+    font-weight: bold;;
+
+    box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.4);
+}
+
+#form > h1{
+    display: block;
+    text-align: center;
+    font-size:1.8rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;;
+}
+
+p > input{
+    margin-top:10px;
+    width:100%;
+    border:none;
+    border-bottom: 2px solid rgb(188, 188, 188);
+    background-color: rgba(0 , 0, 0, 0);
+
+    transition: .2s;
+}
+
+input:focus{
+    outline:none;
+    border-bottom: 3px solid black;
+}
+
+
+#button-container{
+    position: absolute;
+    left:30px;
+    bottom:30px;
+    display: flex;;
+    flex-direction: column;
+    gap:10px;
+}
+
+#button-container > button{
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: bisque;
+    border:none;
+    border-radius:10px;
+    width:clamp(100px, 200px, 350px);
+    padding:10px 1px;
+    transition: .3s;
+    cursor:pointer;
+}
+
+#button-container > button:hover{
+    background-color: rgb(197, 108, 0);
+    color:white;
+    transform: scale(1.1);
+}
+
+#button-container > button:active{
+    transform: scale(1.05);
+}
+
+#button-container > button + p > a{
+    color:rgb(197, 108, 0);
+}
+
+#button-container > button + p > a:hover{
+    color: rgb(255, 166, 58)
+}
+
+.input-invalid{
+    border-bottom: 3px solid red;
+}
