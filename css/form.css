@@ -3,9 +3,10 @@ label{
     display: block;
     margin:20px 0 5px 0;
     box-sizing: border-box;
+    transition: .25s;
 }
 
-span{
+label > span{
     font-size: 0.6rem;
     box-sizing: border-box;
     position: absolute;
@@ -23,7 +24,7 @@ span{
     box-sizing: border-box;
     background-color: rgb(255, 255, 255, 0.85);
     width:500px;
-    height: 500px;
+    height: 550px;
     /* display:flex;
     flex-direction: column;
     align-items: center; */
@@ -111,3 +112,44 @@ input:focus{
 .input-invalid{
     border-bottom: 3px solid red;
 }
+
+/* Pw Validation  */
+
+.pw-validation{
+    display: block;
+    margin:5px 0;
+    transition: .55s;
+    opacity: 0;
+}
+
+.opacity-zero{
+    display:none;
+    
+}
+
+
+.emoji{
+    transition: .5s;
+}
+
+#confirm-span{
+    display: block;
+    margin-top:10px;
+ 
+    transition: .55s;
+    opacity: 0;
+
+    position: relative;
+    
+}
+
+#see-pw{
+    position: absolute;
+    top:0;
+    right:10px;
+}
+
+
+/* Emoji 
+❌✅
+*/

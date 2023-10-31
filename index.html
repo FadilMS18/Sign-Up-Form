@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
+    <!-- Navbar section -->
     <nav>
         <div id="img-container" title="Logo by me FadilMs18" ></div>
         <div class="destination" title="Sign-Up">
@@ -26,6 +27,7 @@
     
     </nav>
 
+    <!-- Top right credit -->
     <p id="author-credit">
         Made By <a href="github.com/FadilMS18/">FadilMs18</a> based on <a href="www.theodinproject.com">The Odin Project</a>
     </p>
@@ -57,7 +59,7 @@
                 <h1>Sign Up</h1>
                 <p>
                     <label for="usname">UserName : <span >Required</span></label>
-                    <input type="text" name="UserName" pattern="/*[A-Z]/*" title="At Least one UpperCase" id="usname" placeholder="UserName" required>
+                    <input type="text" name="UserName"  title="At Least one UpperCase" id="usname" placeholder="UserName" required>
                 </p>
                 <p>
                     <label for="email">E-Mail : <span >Required</span> </label>
@@ -65,14 +67,28 @@
                 </p>
                 <p>
                     <label for="pw">Password : <span >Required</span></label>
-                    <input type="password" name="pw" minlength="8" id="pw" placeholder="Password" required>
+                    <input type="password" name="pw" minlength="8" pattern="^(?=.*[A-Z])(?=.*[0-9]).*$" title="Please Complete the condition & at least 8 Character long"  id="pw" placeholder="Password" required>
+                    <span class="pw-validation opacity-zero">
+                        <span class="emoji">❌</span>
+                        At Least One UpperCase
+                    </span>
+                    <span class="pw-validation opacity-zero">
+                        <span class="emoji">❌</span>
+                        At Least Include One Number
+                    </span>
                 </p>
                 <p>
                     <label for="confirm-pw">Confirm Password : <span >Required</span></label>
                     <input type="password" name="confirm-pw" minlength="8" id="confirm-pw" placeholder="Confirm Password" required>
+                    <span id="confirm-span">
+                        <span id="confirm-emoji">❌</span>
+                        Different From your Password
+                        
+                    </span>
+
                 </p>
 
-                
+                <!-- Button and login Container -->
                 <div id="button-container">
                     <button type="submit" id="submit-btn">
                         Create Account
@@ -88,5 +104,7 @@
 
     </div>   
 
+
+    <script src="./js/form.js"></script>
 </body>
 </html>
