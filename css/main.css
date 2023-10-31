@@ -2,13 +2,14 @@
     box-sizing: border-box;
     width:700px;
     height: 100%;
-    /* background-color: aqua; */
+    
     margin-left:auto;
     padding:60px 50px 0 0 ;
 
-    /* position: relative; */
+    
 }
 
+/* Left Description */
 #header-container{
     box-sizing: border-box;
     color:white;
