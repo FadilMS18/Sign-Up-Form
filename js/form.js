@@ -8,6 +8,7 @@ const confirmPwSpan = document.querySelector(`input[name="confirm-pw"] + span`)
 const emojiSpan = Array.from(document.querySelectorAll(`input[name="pw"] ~ span > span`))
 const confirmEmojiSpan = document.querySelector(`input[name="confirm-pw"] + span:first-child`)
 
+// Get the validation out
 confirmBut.addEventListener("click", giveOpacity)
 
 function giveOpacity(){
@@ -31,7 +32,10 @@ function giveOpacity(){
 const regExUpCase = /.*[A-Z].*/
 const regExNum = /.*[0-9].*/
 
-window.addEventListener("keydown", ()=>{
+// Check the validation of password
+pw.addEventListener("keydown", checkValidationpw)
+confirmPw.addEventListener("keydown", checkValidationpw)
+function checkValidationpw(){
     setTimeout(() =>{
         const value = pw.value
         // Check if Password inludes at least one upperCase
@@ -57,13 +61,13 @@ window.addEventListener("keydown", ()=>{
             pw.style.borderBottomLeftRadius =" 3px " 
             pw.style.borderBottomRightRadius =" 3px " 
             
-        }
-
-        
+        }    
     }, 1);
-})
+}
 
-pw.addEventListener("keydown", ()=>{
+
+// Check the validation of reconfirm pw
+function checkValidationRePw(){
     setTimeout(()=> {
         const value = pw.value
         const confirmValue = confirmPw.value
@@ -78,18 +82,8 @@ pw.addEventListener("keydown", ()=>{
             confirmPw.style.borderBottomLeftRadius = " 3px "
             confirmPw.style.borderBottomRightRadius = " 3px "
         } 
-
-
     },1)
-})
+}
 
-confirmPw.addEventListener("keydown", ()=>{
-    setTimeout(()=> {
-        const value = pw.value
-        const confirmValue = confirmPw.value
-        if(confirmValue === value || value === confirmValue){
-            confirmPwSpan.textContent = "✅ Is The Same with The Password"
-        }
-        else confirmPwSpan.textContent = "❌ Different From your Password"
-    },1)
-})
+pw.addEventListener("keydown", checkValidationRePw)
+confirmPw.addEventListener("keydown", checkValidationRePw)
